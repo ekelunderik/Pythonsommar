@@ -22,19 +22,34 @@ def count(x):
     print(ceil(3.7))
 
 def read(a):
-    print("Hello World")
-    print("giraffe/academy")
-    print()
 
     phrase = "Giraffe Academy"
-    print(phrase + " is cool")
-    print(phrase.upper())
-    print(phrase.upper().isupper())  # gör det till upper och svarar på om det är upper
-    print(len(phrase))
 
-    print(phrase[1])
+    if a>0:
+        print("Hello World")
+        print("giraffe/academy")
+        print()
 
-    print(phrase.index("Academy"))  # var det startar
-    print(phrase.replace("Giraffe", "Elephant"))  # byter ut saker i strings
+        phrase = "Giraffe Academy"
+        print(phrase + " is cool")
+        print(phrase.upper())
+        print(phrase.upper().isupper())  # gör det till upper och svarar på om det är upper
+        print(len(phrase))
 
-count(5)
+        print(phrase[1])
+
+        print(phrase.index("Academy"))  # var det startar
+        print(phrase.replace("Giraffe", "Elephant"))  # byter ut saker i strings
+
+
+
+        print(len("phrase"))
+    else:
+        print(phrase.index("G"))
+        print(phrase.replace("Giraffe", "Lion"))
+
+#count(5)
+
+read(0)
+
+
