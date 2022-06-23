@@ -50,6 +50,8 @@ def read(a):
 
 #count(5)
 
+# Finished at 38.40
+
 read(0)
 
 
