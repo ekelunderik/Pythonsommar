@@ -1,6 +1,6 @@
 from math import *
 
-# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 1:01:50
+# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 1:54:08
 
 def count(x):
     my_num = -4
@@ -68,6 +68,101 @@ def MadLibs():
     print("Roses are " + str(color))
     print(str(plural) + " is blue")
     print("I love " + str(celebrity))
+
+def lists():
+    #Lists, structure for values. Check documentation standards for Py
+
+
+    friends = ["Hannes", "Noak", "Malcolm"]
+    print(friends[1]) #fungerar som siffror, räknar från 0. Negativa tal räknar bakifrån, -1 är sista.
+    print("Min bästa vän är " + friends[0])
+    friends[1] = "Louise" #justera vilka som är med i listan
+    print(friends[1:]) #kolon tar alla efter talet, 1:5 tar alla mellan ett och fem.
+
+    friends[1] = "Louise"
+
+def list_functions():
+
+    #data container, mutable!
+
+    lucky_numbers = [4, 8, 15, 16, 23, 42]
+    friends = ["Kevin", "Karen", "Jim", "Jim", "Oscar", "Toby"]
+
+    friends.sort() #som default i bokstavsordning, kan ej printas direkt eftersom funktionen returnerar "none"
+    print(friends)
+
+    friends.extend(lucky_numbers) #lägger till i slutet av listan
+    friends.append("Creed") #alltid i slutet av listan
+    friends.insert(1, "Kelly") #skickar in i mitten av listan
+    friends.remove("Oscar") #tar bort Jim
+
+    lucky_numbers.sort()
+    lucky_numbers.reverse()
+    print(lucky_numbers)
+
+    #friends.pop() #tar bort ett element i listan
+    #friends.clear()
+
+    print(friends.index("Karen"))
+    print(friends.count("Jim"))
+
+    friends2 = friends.copy()
+    print(friends2)
+
+def tuple():
+
+    #data container, similar to lists. IMMUTABLE! Uses standard brackets ()
+    #used for data thats never going to be change. Possible to create lists of tuples, or tuples of lists
+
+    coordinates = (4, 5)
+    print(coordinates[0])
+
+def function_hi(name, age): #funktioner och return statements
+    print("Hello " + name +  ". You are " + str(age) + ".")
+    return age*age*age #bryter ut direkt ur funktionen, går inte vidare
+
+def if_statement(x, y):
+
+    if x == "man" or x == "lång": #kan också använda "and" som används när båda måste vara sanna
+        is_male = True
+    else:
+        is_male = False
+
+    if x == "man" and y == "lång":
+        print("Schyst king!")
+        return 10
+
+
+    print("Är du en man? " + str(is_male) + "!")
+
+    if is_male:
+        print("Cool! Du är antingen en man eller så är du lång eller båda! KING!")
+    else:
+        print("Wack! Antingen kvinna eller kortis :(")
+
+def if_statement2():
+
+    is_male = True
+    is_tall = False
+
+    if is_male and is_tall:
+        print("You are a tall male")
+    elif is_male and not is_tall:
+        print("You are a short male")
+    elif not is_male and is_tall:
+        print("You are not a male but you are tall")
+    else:
+        print("You are not a male, nor are you tall")
+
+
+
+
+
+
+
+
+
+
 
 
 
