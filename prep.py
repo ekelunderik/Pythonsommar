@@ -154,33 +154,33 @@ def if_statement2():
     else:
         print("You are not a male, nor are you tall")
 
-def prime_finder(k): #Hittar alla primtal under talet k och printar en lista på dem
-
-    prime_list = [] #listan
-    prime_list.append(1)
-
-    for i in range(1, k+1):
-        print (i)
-        for j in range(len(prime_list)):
-            print(j)
-
-
-
-prime_finder(10)
 
 
 
 
 
 
+#
+
+def prime_checker(k): #Hittar alla primtal under talet k
+
+    for i in range (2, k):
+        if k % i == 0:
+            return False
+    return True
+
+def prime_keeper(m):
+
+    j = int(input("Hej Louise, det här är ett program som hittar primtal. Hur många vill du hitta? :)"))
+    prime_list = []
+
+    for i in range(2, m):
+        if prime_checker(i) is True:
+            if len(prime_list) < j:
+                prime_list.append(i)
+
+    print ("Snyggt, här är en lista med " + str(len(prime_list)) + " st primtal.")
+    return prime_list
 
 
-
-
-
-
-
-
-
-
-
+#print(prime_keeper(1000))
