@@ -154,6 +154,21 @@ def if_statement2():
     else:
         print("You are not a male, nor are you tall")
 
+def prime_finder(k): #Hittar alla primtal under talet k och printar en lista på dem
+
+    prime_list = [] #listan
+    prime_list.append(1)
+
+    for i in range(1, k+1):
+        print (i)
+        for j in range(len(prime_list)):
+            print(j)
+
+
+
+prime_finder(10)
+
+
 
 
 
