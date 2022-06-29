@@ -1,6 +1,6 @@
 from math import *
 
-# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 2:32:44
+# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 3:04:17
 
 def count(x):
     my_num = -4
@@ -235,18 +235,31 @@ def guessing_game():
     else:
         print("Sadly, you ran out of guesses. You lose!")
 
-guessing_game()
+def for_loops():
+
+    for letter in "Giraffe Academy":
+        print(letter)
+
+    friends = ["Jim", "James", "Jones"]
+    print(len(friends))
+    for name in friends:
+        print (name)
 
 
+    for index in range(10):
+        print(index)
 
+def exponent_function():
 
+    print(2**3)
+    num1 = int(input("Berätta vilket tal du vill upphöja. "))
+    num2 = int(input("Hur mycket vill du upphöja det till? "))
+    result = 1
 
+    for index in range(num2):
+        result = result*num1
 
-
-
-
-
-
+    print(result)
 
 def prime_checker(k): #Hittar alla primtal under talet k
 
@@ -268,5 +281,44 @@ def prime_keeper(m):
     print ("Snyggt, här är en lista med " + str(len(prime_list)) + " st primtal.")
     return prime_list
 
+def num_play():
+    num_grid = [
 
-#print(prime_keeper(1000))
+        [1,2,3],
+        [2,3,4],
+        [3,4,5],
+        [0]
+    ]
+
+    #print(num_grid[0][0])
+    for row in num_grid:
+        for col in row:
+            print(col)
+
+def translate(phrase):
+    #"Giraffe Language"
+    #vowels -> g
+
+    translation = ""
+
+    for letter in phrase:
+        if letter.lower() in "aeiouåäö":
+            if letter.isupper():
+                translation = translation + "G"
+            else:
+                translation = translation + "g"
+        else:
+            translation = translation + letter
+
+    return translation
+
+print("Comments are fun")
+''' 
+janwdajda
+
+'''
+
+
+
+
+
