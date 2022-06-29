@@ -1,6 +1,6 @@
 from math import *
 
-# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 1:54:08
+# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 2:32:44
 
 def count(x):
     my_num = -4
@@ -154,13 +154,99 @@ def if_statement2():
     else:
         print("You are not a male, nor are you tall")
 
+def max_num(num1, num2, num3):
+
+    #comparisons with if statements, which input is largest? Possible with str as well
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+
+def calculator():
+
+    #calculator that can add, subtract, multiply and divide two numbers.
+    print("Hej och välkommen till Erkans miniräknare. Den kan plus, minus, multiplikation och division av två tal. ")
+    num1 = float(input("Skriv in det första talet."))
+    num2 = float(input("Skriv in det andra talet. "))
+    operator = input("Vilken typ av operation vill du göra?")
+
+    if operator == "+":
+        print(num1 + num2)
+    elif operator == "-":
+        print(num1 - num2)
+    elif operator == "*":
+        print(num1 * num2)
+    elif operator == "/":
+        print(num1 / num2)
+    else:
+        return "Ojdå! Det blev något fel, försök igen!"
+
+def dictionaries():
+    #monthconversion, key - value, kan användas med siffror också
+
+    monthConversions = {
+        "Jan": "January",
+        "Feb": "February",
+        "Mar": "March",
+        "Apr": "April",
+        "May": "May",
+        "Jun": "June",
+        "Jul": "July",
+        "Aug": "August",
+        "Sept": "September",
+        "Okt": "Oktober",
+        "Nov": "November",
+        "Dec": "December",
+    }
+    print(monthConversions["Nov"])
+    print(monthConversions.get("Deg", "Not a valid key. ")) #Efter komma är det "fallback" svar
+
+def while_loops():
+
+    i = 1
+    while i <= 10: #looping condition/looping guard
+        while i <= 9:
+            print(i, "inte än!")
+            i += 1
+        print(i, "men nu!")
+        i += 1
+        print("Loopen är färdig!")
+
+def guessing_game():
+
+    secret_word = "giraffe"
+    guess = ""
+    guess_max = 5
+
+    while guess != secret_word and guess_max > 1:
+        guess = input("Enter guess: ")
+        if guess != secret_word:
+            guess_max -= 1
+            print("Wrong. Try again! You have " + str(guess_max) + " guesses left." )
+            if guess_max == 3:
+                print("Hint: It's an animal which lives in Africa.")
+            elif guess_max == 2:
+                print("Hint: It is really tall!")
+
+    if guess == secret_word:
+        print("Nice, you win!")
+    else:
+        print("Sadly, you ran out of guesses. You lose!")
+
+guessing_game()
 
 
 
 
 
 
-#
+
+
+
+
+
 
 def prime_checker(k): #Hittar alla primtal under talet k
 
