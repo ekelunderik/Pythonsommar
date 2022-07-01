@@ -1,6 +1,8 @@
 from math import *
 
 # from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 3:57:51
+# ideas for projects: https://www.dataquest.io/blog/python-projects-for-beginners/
+
 
 def count(x):
     my_num = -4
@@ -350,11 +352,10 @@ def writer():
 def mods_pips():
 
     # moduler är bara gamla program som kan importeras
-    import useful_tools
-    print(useful_tools.roll_dice(10))
+    # import useful_tools
+    # print(useful_tools.roll_dice(10))
     # list of python modules, bara att importera fritt därifrån,
     # python docs
-
 
 class Student:
     def __init__(self, name, major, gpa, is_on_probation):
@@ -363,8 +364,70 @@ class Student:
         self.gpa = gpa
         self.is_on_probation = is_on_probation
 
-    Student1 = Student("Louise", "Marketing", "4.3", False)
-    Student2 = Student("Erik", "Accounting", "4.02", False)
+    def on_honor_roll(self):
+        if self.gpa >= str(4.2):
+            return True
+        else:
+            return False
 
+    # Student1 = Student("Louise", "Marketing", "4.3", False)
+    # Student2 = Student("Erik", "Accounting", "4.02", False)
 
+    # print(Student2.on_honor_roll())
+
+class Question:
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
+
+question_prompts = [
+    "What color are apples? \n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
+    "What color are bananas? \n(a) Teal\n(b) Magenta\n(c) Yellow\n\n",
+    "What color are strawberries? \n(a) Yellow\n(b) Red \n(c) Blue\n\n"
+    ]
+
+questions = [
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "c"),
+    Question(question_prompts[2], "b")
+    ]
+
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            score += 1
+    print("You got " + str(score) + "/" + str(len(questions)) + " answers right.")
+
+class Chef:
+
+    def make_chicken(self):
+        print("The chef makes a chicken")
+
+    def make_salad(self):
+        print("The chef makes a sallad")
+
+    def make_special_dish(self):
+        print("The chef makes bbq ribs")
+
+class ChineseChef(Chef): # argument gives inheritance of all functions
+
+    def make_chicken(self):
+        print("The chef makes a chicken")
+
+    def make_salad(self):
+        print("The chef makes a sallad")
+
+    def make_special_dish(self):
+        print("The chef makes orange chicken")
+
+    def make_fried_rice(self):
+        print("The chef makes fried rice")
+
+    # from Chef import ChineseChef
+    # from Chef import Chef
+
+    # myChineseChef = ChineseChef()
+    # myChineseChef.make_special_dish()
 
