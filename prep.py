@@ -1,6 +1,6 @@
 from math import *
 
-# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 3:04:17
+# from https://www.youtube.com/watch?v=rfscVS0vtbw&t=1951s, Finished at 3:57:51
 
 def count(x):
     my_num = -4
@@ -47,19 +47,19 @@ def read(a):
         print(phrase.index("G"))
         print(phrase.replace("Giraffe", "Lion"))
 
-def input1(k):
+def input1():
     name = input("enter your name please:")
     age = input("enter your age please:")
     print("Hello " + str(name) + "! You are " + str(age) + ".")
 
-def input2(k):
+def input2():
     num1 = input("Enter a number, please: ")
     num2 = input("What do you want to add it by? ")
     result = float(num1) + float(num2)
     print("Great, you wanted to add " + num1 + " to " + num2 + ".")
     print("That is " + str(result))
 
-def MadLibs():
+def mad_libs():
 
     color = input("What is your favoorite color? ")
     plural = input("What is you favorite thing? ")
@@ -109,7 +109,7 @@ def list_functions():
     friends2 = friends.copy()
     print(friends2)
 
-def tuple():
+def tuple_fun():
 
     #data container, similar to lists. IMMUTABLE! Uses standard brackets ()
     #used for data thats never going to be change. Possible to create lists of tuples, or tuples of lists
@@ -186,7 +186,7 @@ def calculator():
 def dictionaries():
     #monthconversion, key - value, kan användas med siffror också
 
-    monthConversions = {
+    month_conversions = {
         "Jan": "January",
         "Feb": "February",
         "Mar": "March",
@@ -200,8 +200,8 @@ def dictionaries():
         "Nov": "November",
         "Dec": "December",
     }
-    print(monthConversions["Nov"])
-    print(monthConversions.get("Deg", "Not a valid key. ")) #Efter komma är det "fallback" svar
+    print(month_conversions["Nov"])
+    print(month_conversions.get("Deg", "Not a valid key. ")) #Efter komma är det "fallback" svar
 
 def while_loops():
 
@@ -312,13 +312,59 @@ def translate(phrase):
 
     return translation
 
-print("Comments are fun")
-''' 
-janwdajda
+def try_except_block():
 
-'''
+# Catching errors in python
+# skydda programmet genom att bygga in failsafes
 
 
+
+    try:
+        number = int(input("Enter a number: "))
+        print(number)
+    except ValueError:
+        print("Invalid input")
+    except ZeroDivisionError as err: # spara fel som variabel så kan man printa det direkt
+        print(err)
+
+def reader():
+
+    employee_file = open("pyt.txt", "r") # modes: r = read, r+ = read and write, w = write, a = append
+    print(employee_file.readable())
+    for employee in employee_file.readlines():
+            print(employee)
+    # print(employee_file.readline())
+    # print(employee_file.readlines()[1])
+
+    employee_file.close()
+
+def writer():
+
+    # employee_file = open("pyt.txt", "a") # add text to the end of the file
+    employee_file = open("pyt.txt", "w") # "w" overridear allt i gamla filen
+
+    employee_file.write("Toby - Human Resources") #"\n" ger ny linje, "escape character"
+    employee_file.write("\nKelly - Customer Service")
+    employee_file.close()
+
+def mods_pips():
+
+    # moduler är bara gamla program som kan importeras
+    import useful_tools
+    print(useful_tools.roll_dice(10))
+    # list of python modules, bara att importera fritt därifrån,
+    # python docs
+
+
+class Student:
+    def __init__(self, name, major, gpa, is_on_probation):
+        self.name = name
+        self.major = major
+        self.gpa = gpa
+        self.is_on_probation = is_on_probation
+
+    Student1 = Student("Louise", "Marketing", "4.3", False)
+    Student2 = Student("Erik", "Accounting", "4.02", False)
 
 
 
